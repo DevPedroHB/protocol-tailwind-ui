@@ -31,7 +31,13 @@ export function Sidebar() {
             </strong>
             <div className="text-sm flex flex-col pl-2">
               {menu.links.map((link) => (
-                <NavLink href={`/${link.toLocaleLowerCase()}`}>{link}</NavLink>
+                <NavLink
+                  href={`/${
+                    link === "Introduction" ? "" : link.toLocaleLowerCase()
+                  }`}
+                >
+                  {link}
+                </NavLink>
               ))}
             </div>
           </div>
